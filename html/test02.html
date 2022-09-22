@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-     <title>글자를 바꾸는 태그들</title>
-</head>
-<body>
-    <h1>글자를 바꾸는 태그들</h1>
-    <p>
-        bold = b <b>b</b> <b>볼드</b>체 <br>
-        bold = strong <strong>strong</strong> (중요하다는 <strong>의미로)볼드</strong>체<br>
-        italic = i <i>i</i> 이<i>텔릭</i>체
-        italic = em <em>em</em> (강조한다는 <em>의미로)이텔릭</em>체<br>
-        small = <small>small</small> 글자 <small>크기를</small> 작게<br>
-        sup = <sup>sup</sup> 윗첨자 (ex) 30cm<sup>3</sup>, 100km<sup>2</sup><br>
-        sub = <sub>sub</sub> 아랫첨자 (ex) H<sub>2</sub>O O<sub>3</sub> CO<sub>2</sub><br>
-        mark = <mark>mark</mark> 형광 <mark>펜</mark> 효과
-    </p>
+ <head>
+  <title>글자를 바꾸는 태그들</title>
+ </head>
+ <body>
+  <h1>1. html문서를 구성하는 필수태그들</h1>
+  <pre>
+   &lt;html&gt; ----- 문서의 시작을 선언
+    &lt;head&gt; ----- 머리말 시작을 선언
+     &lt;title&gt; ----- 제목 시작을 선언
+     &lt;/title&gt; ----- 제목 끝을 선언
+    &lt;/head&gt; ----- 머리말 끝을 선언
+    &lt;body&gt; ----- 본문 시작을 선언
 
-    <p>
-        1. <mark><b>bold mark</b></mark> = o<br>
-        2. <mark><b>bold mark</mark></b> = x<br>
-        3. <b><mark>bold mark</b></mark> = x<br>
-        4. <b><mark>bold mark</mark></b> = o
-    </p>
-    <h2> </h2>
+    &lt;/body&gt; ----- 본문 끝을 선언
+   &lt;/html&gt; ----- 문서의 끝을 선언
+  </pre>
+  <h1>2. 글자를 바꾸는 태그들</h1>
+   <p>
+    bold = &lt;b&gt; <b>b</b> <b>볼드</b>체 <br>
+    bold = &lt;strong&gt; <strong>strong</strong>     (중요하다는 <strong>의미로)볼드</strong>체<br>
+    italic = &lt;i&gt; <i>i</i> 이<i>텔릭</i>체<br>
+    italic = &lt;em&gt; <em>em</em> 
+    (강조한다는 <em>의미로)이텔릭</em>체<br>
+    &lt;small&gt; = <small>small</small> 글자 
+    <small>크기를</small> 작게<br>
+    &lt;sup&gt; = <sup>sup</sup> 윗첨자 
+    (ex) 30cm<sup>3</sup>, 100km<sup>2</sup><br>
+    &lt;sub&gt; = <sub>sub</sub> 아랫첨자
+    (ex) H<sub>2</sub>O, O<sub>3</sub>, CO<sub>2</sub><br> 
+    &lt;mark&gt; = <mark>mark</mark> 형광<mark>펜</mark> 효과
+   </p>
+   
+  <h3>markup O,X</h3>
+   <!-- 시작과 종료가 서로 엇갈리면 틀림, 감싸듯이. -->
 
-</body>
+   <p>
+    1. <mark><b>bold mark</b></mark> = O<br>
+    2. <mark><b>bold mark</mark></b> = X<br>
+    3. <b><mark>bold mark</b></mark> = X<br>
+    4. <b><mark>bold mark</mark></b> = O
+   </p>
+
+  <h2>주석태그 - <small>소스상에 설명문 등을 추가</small></h2>
+  <!-- 태그도 주석내에서는 적용 안 됨 -->
+  &lt;!-- 주석 설명 --&gt;
+  
+ <hr>
+  <h2>특수문자 태그들(예약어 포함)</h2>
+  ☆☎
+   
+  <!--예약어란 문서에서 용도가 정해진 문자
+   특수문자 태그는 &로 시작하고 ;로 끝남-->
+  <p>
+   &lt; = &amp;lt; <br>
+   &gt; = &amp;gt; <br>
+   &amp; = &amp;amp;<br>
+   &nbsp;(공백) = &amp;nbsp; <br>
+   
+   &copy; = &amp;copy;<br>
+   &reg; = &amp;reg;<br>
+   &trade; = &amp;trade;<br>
+  <!-- https://www.w3schools.com/html/html_symbols.asp -->
+   &#9762; = &amp;#9762;<br>
+   &#9786; = &amp;#9786;
+  </p>
+  
+  
+
+
+ </body>
 </html>
