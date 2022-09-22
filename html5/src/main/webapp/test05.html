@@ -6,9 +6,38 @@
 </head>
 <body>
 	<h1>form-1</h1>
+	<p>form으로 사용자와 연결하는 페이지 구성하기</p>
+	<h2>form요소들</h2>
+	<p>
+		input에 대한 설명문을 label로 표시하고<br>
+		label에는 속성 for의 값을, input에는 id의 값(중복적용 불가)을 서로 일치시킴<br>
+		id = 예)주민번호같은 역할
+	</p>
+	
 	<form action="test.jsp" method="post">
-		<input type="text">
+	<h3>input type="text" 주관식. 한 줄 글상자</h3>
+		<label for="nm">이름</label> <input type="text" id="nm" size="10">
+		size="n"으로 상자의 길이를 지정<br>
+		<label for="id">ID</label> <input type="text" id="id" maxlength="10">
+		maxlength="n"으로 입력값의 최대치를 지정.
 		
+		<h3>input type=" " 주관식. 암호 글상자</h3>
+		<label for="pwd">비밀번호</label> <input type="password" id="pwd" minlength="8">
+		<br>
+		minlength="n"으로 입력값의 최소를 지정.
+		<br>
+		<label for="jn">주민번호 뒷 7자리</label> <input type="password" id="jn" maxlength="7">
+		
+		<h3>textarea ... /textarea 주관식. 큰 글상자</h3>
+		<p>rows="n" cols="n"으로 상자의 가로와 세로 크기를 지정.</p>
+		<textarea rows="10" cols="50" placeholder="자기소개를 간단히 하세요"></textarea>
+		
+		<hr>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소"><br>
+		<input type="button" value="멍청이버튼" onclick="alert('삐빅')">
+		
+		<button>전송</button>
 		
 		
 	</form>
